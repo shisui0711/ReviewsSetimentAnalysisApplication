@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  # FastAPI Backend Service (Development)
+  sentiment-api:
+    build:
+      context: ./reviews-sentiment-analysis
+      dockerfile: Dockerfile
+    container_name: sentiment-analysis-api-dev
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./reviews-sentiment-analysis:/app
+      - model_cache:/app/models
+    networks:
+      - sentiment-network
+    restart: unless-stopped
+    command: ["uvicorn", "src.api.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+
+  # Next.js Frontend Service (Development)
+  sentiment-ui:
+    image: node:18-alpine
+    container_name: sentiment-analysis-ui-dev
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+      - NEXT_TELEMETRY_DISABLED=1
+    volumes:
+      - ./reviews-analysis-ui:/app
+      - /app/node_modules
+      - /app/.next
+    networks:
+      - sentiment-network
+    restart: unless-stopped
+    command: sh -c "corepack enable pnpm && pnpm install && pnpm run dev"
+    depends_on:
+      - sentiment-api
+
+networks:
+  sentiment-network:
+    driver: bridge
+    name: sentiment-analysis-network-dev
+
+volumes:
+  model_cache:
+    name: sentiment-models-dev
+    driver: local
