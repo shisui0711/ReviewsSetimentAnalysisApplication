@@ -62,7 +62,6 @@ venv.bak/
 *.h5
 *.hdf5
 *.ckpt
-models/
 !models/.gitkeep
 
 # Jupyter Notebook
@@ -214,3 +213,11 @@ ssl/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+.clinerules/byterover-rules.md
+.kilocode/rules/byterover-rules.md
+.roo/rules/byterover-rules.md
+.windsurf/rules/byterover-rules.md
+.cursor/rules/byterover-rules.mdc
+.kiro/steering/byterover-rules.md
+.qoder/rules/byterover-rules.md
+.augment/rules/byterover-rules.md
