@@ -109,13 +109,13 @@ class SentimentEvaluator:
         confidences = [max(probs) for probs in predicted_probs]
         
         results = {
-            'accuracy': accuracy,
-            'macro_precision': macro_precision,
-            'macro_recall': macro_recall,
-            'macro_f1': macro_f1,
-            'weighted_precision': weighted_precision,
-            'weighted_recall': weighted_recall,
-            'weighted_f1': weighted_f1,
+            'accuracy': float(accuracy),
+            'macro_precision': float(macro_precision),
+            'macro_recall': float(macro_recall),
+            'macro_f1': float(macro_f1),
+            'weighted_precision': float(weighted_precision),
+            'weighted_recall': float(weighted_recall),
+            'weighted_f1': float(weighted_f1),
             'per_class_metrics': {
                 'precision': precision.tolist(),
                 'recall': recall.tolist(),
@@ -123,16 +123,29 @@ class SentimentEvaluator:
                 'support': support.tolist()
             },
             'confusion_matrix': cm.tolist(),
-            'classification_report': report,
+            'classification_report': self._convert_report_to_json_serializable(report),
             'confidence_stats': {
-                'mean': np.mean(confidences),
-                'std': np.std(confidences),
-                'min': np.min(confidences),
-                'max': np.max(confidences)
+                'mean': float(np.mean(confidences)),
+                'std': float(np.std(confidences)),
+                'min': float(np.min(confidences)),
+                'max': float(np.max(confidences))
             }
         }
         
         return results
+    
+    def _convert_report_to_json_serializable(self, report: Dict) -> Dict:
+        """Convert classification report to JSON serializable format"""
+        serializable_report = {}
+        for key, value in report.items():
+            if isinstance(value, dict):
+                serializable_report[key] = {
+                    k: float(v) if isinstance(v, (np.floating, np.integer)) else v
+                    for k, v in value.items()
+                }
+            else:
+                serializable_report[key] = float(value) if isinstance(value, (np.floating, np.integer)) else value
+        return serializable_report
     
     def _get_sample_predictions(
         self, 
@@ -240,7 +253,7 @@ class SentimentEvaluator:
         # Analyze error patterns
         error_patterns = {
             'total_errors': len(errors),
-            'error_rate': len(errors) / len(texts),
+            'error_rate': float(len(errors) / len(texts)),
             'high_confidence_errors': len([e for e in errors if e['confidence'] > 0.8]),
             'low_confidence_errors': len([e for e in errors if e['confidence'] < 0.6]),
             'common_confusions': self._analyze_confusion_patterns(true_labels, predicted_labels),

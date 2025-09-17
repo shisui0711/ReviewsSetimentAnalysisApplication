@@ -1,0 +1,347 @@
+{
+  "metrics": {
+    "accuracy": 0.7082,
+    "macro_precision": 0.6800659052035557,
+    "macro_recall": 0.6791666666666666,
+    "macro_f1": 0.6752436851501745,
+    "weighted_precision": 0.7363180705609211,
+    "weighted_recall": 0.7082,
+    "weighted_f1": 0.7189713447967124,
+    "per_class_metrics": {
+      "precision": [
+        0.7966292134831461,
+        0.3988050784167289,
+        0.8447634237107922
+      ],
+      "recall": [
+        0.709,
+        0.534,
+        0.7945
+      ],
+      "f1": [
+        0.7502645502645503,
+        0.4566053869174861,
+        0.8188611182684875
+      ],
+      "support": [
+        2000,
+        1000,
+        2000
+      ]
+    },
+    "confusion_matrix": [
+      [
+        1418,
+        485,
+        97
+      ],
+      [
+        271,
+        534,
+        195
+      ],
+      [
+        91,
+        320,
+        1589
+      ]
+    ],
+    "classification_report": {
+      "negative": {
+        "precision": 0.7966292134831461,
+        "recall": 0.709,
+        "f1-score": 0.7502645502645503,
+        "support": 2000.0
+      },
+      "neutral": {
+        "precision": 0.3988050784167289,
+        "recall": 0.534,
+        "f1-score": 0.4566053869174861,
+        "support": 1000.0
+      },
+      "positive": {
+        "precision": 0.8447634237107922,
+        "recall": 0.7945,
+        "f1-score": 0.8188611182684875,
+        "support": 2000.0
+      },
+      "accuracy": 0.7082,
+      "macro avg": {
+        "precision": 0.6800659052035557,
+        "recall": 0.6791666666666666,
+        "f1-score": 0.6752436851501745,
+        "support": 5000.0
+      },
+      "weighted avg": {
+        "precision": 0.7363180705609211,
+        "recall": 0.7082,
+        "f1-score": 0.7189713447967124,
+        "support": 5000.0
+      }
+    },
+    "confidence_stats": {
+      "mean": 0.7384293675422668,
+      "std": 0.1334226280450821,
+      "min": 0.35890820622444153,
+      "max": 0.9231604933738708
+    },
+    "sample_predictions": [
+      {
+        "text": "Don\u2019t waste your time! These are AWFUL. They are see through, the fabric feels like tablecloth, and ...",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "negative",
+        "confidence": 0.7436159253120422,
+        "correct": true,
+        "probabilities": {
+          "negative": 0.7436159253120422,
+          "neutral": 0.22730952501296997,
+          "positive": 0.029074491932988167
+        }
+      },
+      {
+        "text": "One Star I bought 4 and NONE of them worked. Yes I used new batteries!",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "negative",
+        "confidence": 0.7706267237663269,
+        "correct": true,
+        "probabilities": {
+          "negative": 0.7706267237663269,
+          "neutral": 0.17140550911426544,
+          "positive": 0.057967767119407654
+        }
+      },
+      {
+        "text": "Totally useless On first use it didn't heat up and now it doesn't work at all",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "negative",
+        "confidence": 0.7761000990867615,
+        "correct": true,
+        "probabilities": {
+          "negative": 0.7761000990867615,
+          "neutral": 0.18822963535785675,
+          "positive": 0.03567028045654297
+        }
+      },
+      {
+        "text": "Gold filled earrings You want an HONEST answer? I just returned from UPS where I returned the FARCE ...",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "negative",
+        "confidence": 0.5311694145202637,
+        "correct": true,
+        "probabilities": {
+          "negative": 0.5311694145202637,
+          "neutral": 0.4022667706012726,
+          "positive": 0.06656387448310852
+        }
+      },
+      {
+        "text": "Poor container The glue works fine but the container is impossible to work with. The cap doesn't com...",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "neutral",
+        "confidence": 0.7161704301834106,
+        "correct": false,
+        "probabilities": {
+          "negative": 0.23820187151432037,
+          "neutral": 0.7161704301834106,
+          "positive": 0.04562772437930107
+        }
+      },
+      {
+        "text": "Won\u2019t buy again I was over the moon when I got this. I love sunflowers and it looked exactly like th...",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "negative",
+        "confidence": 0.7687203288078308,
+        "correct": true,
+        "probabilities": {
+          "negative": 0.7687203288078308,
+          "neutral": 0.20081385970115662,
+          "positive": 0.03046584315598011
+        }
+      },
+      {
+        "text": "Very brittle case Gotta say, not impressed with the quality. I mean, I can't say I expected it to be...",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "neutral",
+        "confidence": 0.707938015460968,
+        "correct": false,
+        "probabilities": {
+          "negative": 0.24952225387096405,
+          "neutral": 0.707938015460968,
+          "positive": 0.04253965988755226
+        }
+      },
+      {
+        "text": "My 9 year old daughter was so disappointed. It didn't even have a different piece for ... I would gi...",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "negative",
+        "confidence": 0.7259977459907532,
+        "correct": true,
+        "probabilities": {
+          "negative": 0.7259977459907532,
+          "neutral": 0.2408999800682068,
+          "positive": 0.03310227021574974
+        }
+      },
+      {
+        "text": "Some of the glasses were broken when they arrived. Two of the glasses were broken when I opened the ...",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "negative",
+        "confidence": 0.6157191395759583,
+        "correct": true,
+        "probabilities": {
+          "negative": 0.6157191395759583,
+          "neutral": 0.35380232334136963,
+          "positive": 0.030478525906801224
+        }
+      },
+      {
+        "text": "Horrible Doesn\u2019t even work . Did nothing for me :(",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "negative",
+        "confidence": 0.7606779932975769,
+        "correct": true,
+        "probabilities": {
+          "negative": 0.7606779932975769,
+          "neutral": 0.20915530622005463,
+          "positive": 0.03016667440533638
+        }
+      }
+    ]
+  },
+  "error_analysis": {
+    "total_errors": 1459,
+    "error_rate": 0.2918,
+    "high_confidence_errors": 109,
+    "low_confidence_errors": 526,
+    "common_confusions": {
+      "negative -> neutral": 485,
+      "positive -> neutral": 320,
+      "neutral -> negative": 271,
+      "neutral -> positive": 195,
+      "negative -> positive": 97,
+      "positive -> negative": 91
+    },
+    "sample_errors": [
+      {
+        "index": 4,
+        "text": "Poor container The glue works fine but the container is impossible to work with. The cap doesn't come off without plyers and then won't go back on without a violent abrupt force involving both hands and a solid object (desk drawer). This happened even though I was careful to not gum up the lid or tapering snout.",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "neutral",
+        "confidence": 0.7161705493927002,
+        "probabilities": {
+          "negative": 0.23820173740386963,
+          "neutral": 0.7161705493927002,
+          "positive": 0.045627739280462265
+        }
+      },
+      {
+        "index": 6,
+        "text": "Very brittle case Gotta say, not impressed with the quality. I mean, I can't say I expected it to be overwhelmingly amazing with the cost being where it's at. But, certainly I thought it would last longer than a few days. Had the phone in my gym bag. Slid out from the side and barely tapped the wall. On the aluminum side. Not even on the glass. And low and behold, instantaneous crack. Oddly enough, just on the back. Not a splinter at all on the front. Not sure if the back is intentionally more susceptible to damage or just my luck. Either way, I have to give this product a thumbs down. Wish it held up better. It really is a nice design. I am a fan of how the product looks and the concept. No issue there. Just not durable at all.",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "neutral",
+        "confidence": 0.707938015460968,
+        "probabilities": {
+          "negative": 0.249522402882576,
+          "neutral": 0.707938015460968,
+          "positive": 0.04253965988755226
+        }
+      },
+      {
+        "index": 18,
+        "text": "Not worth the money These headphones were great in the beginning. Easy to charge, stayed in my ears, and had great sound quality. Unfortunately, they crapped out about a year after I purchased them. They will charge but no longer turn on.",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "neutral",
+        "confidence": 0.5057183504104614,
+        "probabilities": {
+          "negative": 0.45640087127685547,
+          "neutral": 0.5057183504104614,
+          "positive": 0.03788080811500549
+        }
+      },
+      {
+        "index": 21,
+        "text": "I bought Halo before, but this one does not ... I bought Halo before, but this one does not look the same! It seems to have lots of fat (a white greasy substance) in it!",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "neutral",
+        "confidence": 0.4351959526538849,
+        "probabilities": {
+          "negative": 0.370196133852005,
+          "neutral": 0.4351959526538849,
+          "positive": 0.1946079581975937
+        }
+      },
+      {
+        "index": 26,
+        "text": "This does not stick well or weed well! The clear backing lacks the stickiness to keep the letters adhered until you\u2019re finished weeding! It\u2019s so frustrating to have to keep up with a bunch of letters and pieces that have curled and fell off the paper! It requires additional work to make sure that they\u2019re aligned properly and being applied on the right side, which was an issue for me several times! I purchased 3 packs of this and while it\u2019s okay for larger designs, it sucks for lettering or anything intricate \ud83d\ude0f Possibly it\u2019s old and dried out, but in any event, I will not be buying from this vendor again and suggest that you don\u2019t either!",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "neutral",
+        "confidence": 0.44138404726982117,
+        "probabilities": {
+          "negative": 0.40068918466567993,
+          "neutral": 0.44138404726982117,
+          "positive": 0.15792682766914368
+        }
+      },
+      {
+        "index": 50,
+        "text": "They added perfume I have been using this for several years and recently bought several only to find out that they all have perfume in them now.",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "positive",
+        "confidence": 0.8757734298706055,
+        "probabilities": {
+          "negative": 0.03256223350763321,
+          "neutral": 0.09166431427001953,
+          "positive": 0.8757734298706055
+        }
+      },
+      {
+        "index": 61,
+        "text": "Thanks a lot! They sent me 4 of the same flag it\u2019s not like the picture shows",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "positive",
+        "confidence": 0.6418853402137756,
+        "probabilities": {
+          "negative": 0.09652125835418701,
+          "neutral": 0.26159340143203735,
+          "positive": 0.6418853402137756
+        }
+      },
+      {
+        "index": 65,
+        "text": "Child hat way too small The child hat is ridiculously small. It was not even close to the right size for my 3 year old son. I checked the size, and it wouldn't have even fit him as a newborn. I liked the adult hat but it is not sold separately. The seller was rude and unhelpful when I contacted them directly through Amazon. The faux fur pom was either already torn or tore when I was trying on the hat. See the attached photograph. The pom came aprt, exposing the inner fluff.",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "neutral",
+        "confidence": 0.699678361415863,
+        "probabilities": {
+          "negative": 0.2515857517719269,
+          "neutral": 0.699678361415863,
+          "positive": 0.04873598366975784
+        }
+      },
+      {
+        "index": 77,
+        "text": "Be careful, you may get CAP or you may get Golds Gym. When you order a product, you expect the product to be as described. They were advertised as CAP Dumbbells. However, the product received was Golds Gym dumbbells. If I wanted Golds Gym, I would have bought these from Walmart. I have a complete set of CAP dumbbells, with the exception of my one set from Golds Gym. Is the weight correct, yes. Due they perform, yes. I just expect to get what I paid for not something else. After reading a few other reviews, I see that others have had the same issue.",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "neutral",
+        "confidence": 0.7185550928115845,
+        "probabilities": {
+          "negative": 0.22528567910194397,
+          "neutral": 0.7185550928115845,
+          "positive": 0.05615931376814842
+        }
+      },
+      {
+        "index": 88,
+        "text": "Needs a more powerful fan Doesn't distribute the steam strong enough small fan but it is quiet but who cares",
+        "true_sentiment": "negative",
+        "predicted_sentiment": "neutral",
+        "confidence": 0.4923975169658661,
+        "probabilities": {
+          "negative": 0.06646637618541718,
+          "neutral": 0.4923975169658661,
+          "positive": 0.44113606214523315
+        }
+      }
+    ]
+  }
+}
